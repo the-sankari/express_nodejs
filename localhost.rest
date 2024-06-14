@@ -15,3 +15,25 @@ Accept: application/json
 
 ###
 GET {{route}}/api/capitals/1
+
+###
+
+GET {{route}}/api/cities/
+
+###
+GET {{route}}/api/cities/
+
+###
+
+POST {{route}}/api/cities/
+Content-Type: application/json
+
+{
+    "name": "Dhaka",
+    "country": "Bangladesh"
+}
+
+
+
+
+

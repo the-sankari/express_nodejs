@@ -37,9 +37,26 @@ describe("The GET cities route", () => {
     const response = await request(app).get("/api/cities/1");
     expect(response.status).toBe(200);
     expect(response.body).toEqual({
-        id: 1,
-        name: "New York",
-        country: "USA",
-      });
+      id: 1,
+      name: "New York",
+      country: "USA",
+    });
+  });
+});
+
+describe("The POST /api/cities endpoint", () => {
+  it("should create a new city", async () => {
+    const newCity = {
+      name: "Berlin",
+      country: "Germany",
+    };
+    const response = await request(app)
+      .post("/api/cities")
+      .set("content", "application/json") // meta data writing standard
+      .send(newCity);
+    expect(response.statusCode).toBe(200);
+    expect(response.body.id).toBeTruthy();
+    expect(response.body.name).toEqual(newCity.name);
+    expect(response.body.country).toEqual(newCity.country);
   });
 });
