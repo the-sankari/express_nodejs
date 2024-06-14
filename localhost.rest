@@ -1,0 +1,17 @@
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+
+@route = http://{{host}}
+
+
+GET {{route}}/api/countries
+
+
+###
+
+GET {{route}}/api/capitals/
+Accept: application/json
+
+###
+GET {{route}}/api/capitals/1
