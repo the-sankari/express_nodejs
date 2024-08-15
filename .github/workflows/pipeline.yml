@@ -16,8 +16,7 @@ jobs:
         run: echo "Running a test"
 
       - name: Test status
-        run: echo "Test status, passed"
-       
+        run: echo "Test status, passed"  
   build:
     runs-on: ubuntu-latest
     needs: test
