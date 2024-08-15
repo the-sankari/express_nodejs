@@ -14,6 +14,20 @@ jobs:
 
       #- name: Simulate an error
       #  run: echo "About to fail"; exit 1
-
       - name: Another greeting
         run: echo "Hello, CI/CD again!"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo "Hello, CI/CD!"
+      - name: Run a one-line script
+        run: echo "Hello, CI/CD again!"
+      - name: Run a test
+        run: echo "Running a test"
+
+      - name: Test status
+        run: echo "Test status, passed"
+       
+
