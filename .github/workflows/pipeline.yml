@@ -39,6 +39,6 @@ jobs:
       - name: Deploy to GitHub Pages
         run: echo "Deployed for production"
       - name: Deployment status 
-        run: deployment passed
+        run: echo "deployment passed"
 
         
