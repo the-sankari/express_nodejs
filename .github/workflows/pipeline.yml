@@ -12,8 +12,8 @@ jobs:
           persist-credentials: false 
       - name: Install dependency
         run: npm install
-      # - name: Lint 
-      #   run: npm run lint
+      - name: Lint 
+        run: npm run lint
       - name: Test
         run: npm run test
   build:
@@ -25,9 +25,7 @@ jobs:
           persist-credentials: false 
       - name: Install dependency
         run: npm install
-      # - name: Lint 
-      #   run: npm run lint
-      - name: Test
+      - name: build
         run: npm run build
   deploy:
     runs-on: ubuntu-latest
